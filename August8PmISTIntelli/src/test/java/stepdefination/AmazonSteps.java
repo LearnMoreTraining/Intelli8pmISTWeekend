@@ -55,12 +55,15 @@ public class AmazonSteps {
     public void validateTheNavigation() {
 
         Assert.assertEquals("Baby Wishlist",context.pageObjectManager.getBabyWishListPage().getBabyText());
+
+        Assert.assertTrue(context.pageObjectManager.getAmazonHomePage().m1());
+        Assert.assertFalse(context.pageObjectManager.getAmazonHomePage().m1());
     }
 
     @When("user enter the product name {string}")
     public void userEnterTheProductName(String productName) throws IOException {
 
-        context.pageObjectManager.getAmazonHomePage().enterProductName("login",1,0);
+        context.pageObjectManager.getAmazonHomePage().enterProductName(productName);
 
     }
 

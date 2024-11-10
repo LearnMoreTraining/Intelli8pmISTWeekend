@@ -19,7 +19,7 @@ public class JqueryHomePage {
         WebElement target = driver.findElement(By.id("droppable"));
         Actions a = new Actions(driver);
         a.dragAndDrop(source,target).build().perform();
-       // driver.switchTo().defaultContent();
+
     }
 
     public void getDroppedText(){

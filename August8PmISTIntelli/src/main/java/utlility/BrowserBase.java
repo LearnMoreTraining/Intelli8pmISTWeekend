@@ -69,7 +69,9 @@ public class BrowserBase {
 
             driver.navigate().refresh();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            driver.manage().deleteAllCookies();
         }
+
         return driver;
     }
 }
